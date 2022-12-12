@@ -1,0 +1,460 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Akshar", sans-serif;
+}
+
+/* Hero section */
+.hero-image {
+  background-image: url("/img/gym-website-hero-page-bg.jpg");
+  width: auto;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.container {
+  width: 90%;
+  height: 80%;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+}
+
+.info h1 {
+  color: #a3b18a;
+}
+
+@media (max-width: 428px) {
+  .hero-image {
+    background-image: url(/img/mobile-view-hero-bg.jpg);
+    width: auto;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+  .container {
+    height: auto;
+  }
+
+  .about-article-1 {
+    margin: 12px 12px;
+  }
+
+  .about-article-2 {
+    margin: 12px 12px;
+  }
+}
+
+/* this is the css part for the hero text */
+.info h1:nth-child(2) {
+  color: #a3b18a;
+}
+
+.info h2 {
+  color: #a3b18a;
+}
+
+.text-diff-color {
+  color: #588157;
+}
+
+/* About page */
+#about-page {
+  background-image: url(/img/background-one.jpg);
+  width: auto;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #a3b18a;
+}
+
+#about-page h2 {
+  color: #a3b18a;
+}
+
+#about-page h1 {
+  color: #a3b18a;
+}
+
+#about-page span {
+  color: #588157;
+}
+
+
+
+
+/* footer section */
+.footer-component {
+  background-color: #404043;
+  color: #a3b18a;
+}
+
+.footer-nav-link a {
+  color: #a3b18a;
+}
+
+.footer-nav-link a:hover {
+  color: #588157;
+}
+
+.social-icon {
+  color: #a3b18a;
+}
+
+/* navbar with hamburger menu */
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #a3b18a;
+  height: 50px;
+  padding: 3em;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li {
+  margin: 1rem;
+  overflow: hidden;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+#menu-toggle {
+  display: none;
+  padding: 10px;
+}
+
+
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: sticky;
+  height: 2px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: "";
+  margin-top: 8px;
+}
+
+.menu-button::after {
+  content: "";
+  margin-top: 6px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: fixed;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 0.5em 0;
+    width: 100%;
+    color: #a3b18a;
+    background-color: #222;
+  }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+}
+
+nav nav a {
+  color: #a3b18a;
+}
+
+nav li:hover {
+  color: #588157;
+  transform: scale(1.5);
+}
+
+nav img:hover {
+  transform: scale(1.5);
+}
+
+/* This segment is an animation keyframe for wiggle button */
+
+.wiggle {
+  background-color: #588157;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+@keyframes wiggle {
+  2% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  4% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  6% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  8% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  10% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  12% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  14% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  16% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  18% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  20% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+
+a.wiggle:hover {
+  display: inline-block;
+  animation: wiggle 2.7s infinite;
+  background-color: #a3b18a;
+}
+
+a.wiggle {
+  display: inline-block;
+  animation: none;
+}
+
+/* End Wiggle */
+
+/* This is the services page */
+#services-page {
+  background-color: #171717;
+  color: #a3b18a;
+}
+
+.services-heading
+h3 {
+  color: #a3b18a;
+}
+
+.services-heading span {
+  color: #a3b18a;
+}
+
+/* this is the form section */
+
+input[type="submit"] {
+  background-color: #a3b18a;
+  padding: 8px 24px;
+  border-radius: 6px;
+  color: #171717;
+  cursor: pointer;
+}
+
+input[type="reset"] {
+  cursor: pointer;
+}
+
+#contact-page {
+  background-color: #171717;
+  width: auto;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #a3b18a;
+  margin: auto;
+}
+
+input.wiggle:hover {
+  display: inline-block;
+  animation: wiggle 2.7s infinite;
+  background-color: #a3b18a;
+}
+
+input.wiggle {
+  display: inline-block;
+  animation: none;
+  background-color: #588157;
+}
+
+#contact-page h2 {
+  color: #588157;
+}
+
+#contact-page p span {
+  color: #588157;
+}
+
+#contact-page h1 {
+  color: #a3b18a;
+}
+
+#contact-page h1 span {
+  color: #588157;
+}
+
+/* This is the form error validation section */
+
+input:invalid + .error {
+  visibility: visible;
+  color: #f15b5b;
+}
+
+.error,
+input:placeholder-shown + .error {
+  visibility: hidden;
+}
+
+/* this is the location page section */
+#location-page {
+  background-color: #171717;
+  width: auto;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin: auto;
+}
+
+section p {
+  color: #a3b18a;
+}
+
+section {
+  color: #588157;
+}
+
+span {
+  color: #588157;
+}
+
+header {
+  color: #a3b18a;
+}
+
+@media (max-width: 428px) {
+  iframe {
+    margin: auto;
+    width: fit-content;
+  }
+}
+
+
+
+/* this is the video pop up help section */
+
+#help-vid {
+  display: none;
+  width: 1200px;
+}
+
+#help-vid:hover {
+  display: block;
+}
+
+#popup-help:hover + #help-vid {
+  display: block;
+}
+
+#popup-help {
+  display: inline-block;
+}
+
+video #help-vid {
+  width: 800px;
+}
+
+@media (min-width:390px) {
+  #popup-help {
+    padding: 40px;
+  }
+}
