@@ -11,7 +11,7 @@ body {
 
 /* Hero section */
 .hero-image {
-  background-image: url("/img/gym-website-hero-page-bg.jpg");
+  background-image: url("img/gym-website-hero-page-bg.jpg");
   width: auto;
   height: 100vh;
   background-position: center;
@@ -35,7 +35,7 @@ body {
 
 @media (max-width: 428px) {
   .hero-image {
-    background-image: url(/img/mobile-view-hero-bg.jpg);
+    background-image: url(img/mobile-view-hero-bg.jpg);
     width: auto;
     height: 100vh;
     background-position: center;
@@ -72,7 +72,7 @@ body {
 
 /* About page */
 #about-page {
-  background-image: url(/img/background-one.jpg);
+  background-image: url(img/background-one.jpg);
   width: auto;
   height: auto;
   background-position: center;
