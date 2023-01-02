@@ -6,6 +6,7 @@ function handle_html(location) {
     return "html/" + location;
    } else {
      return location;
+   }
 }
 
 // Fetch the html for the component
