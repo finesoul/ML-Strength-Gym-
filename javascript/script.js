@@ -1,7 +1,15 @@
 // the following code is used to demonstrate the need for defer
 
+function handle_html(location) {
+  let here = window.location.href;
+  if (here.indexOf("/html/") == -1) {
+    return "html/" + location;
+   } else {
+     return location;
+}
+
 // Fetch the html for the component
-fetch("components/nav.html")
+fetch(handle_html("components/nav.html"))
   .then((response) => response.text())
   .then((component_html) => {
     console.log(component_html);
@@ -13,7 +21,7 @@ fetch("components/nav.html")
     }
   });
 
-fetch("components/footer.html")
+fetch(handle_html("components/footer.html"))
   .then((response) => response.text())
   .then((component_html) => {
     console.log(component_html);
